@@ -232,12 +232,12 @@ return [
     [
         'text' => 'To Do\'s',
         'url'  => 'todos',
-        'icon' => 'fas fa-fw fa-file',
+        'icon' => 'far fa-list-alt',
     ],
     [         
         'text' => 'Calendar',
         'url'  => 'calendar',
-        'icon' => 'far fa-list-alt',
+        'icon' => 'fas fa-fw fa-calendar-alt',
     ],
 ],
 
