@@ -17,6 +17,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/', function () {
+    return view('todos');
+});
+
+Route::get('/', function () {
+    return view('calendar');
+});
+
+Route::get('/', function () {
+    return view('board');
+});
+
 Route::get('/db-test', function () {
     try {
         \DB::connection()->getPDO();
