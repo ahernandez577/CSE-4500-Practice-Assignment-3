@@ -53,7 +53,7 @@ Route::get('/db-migrate', function() {
 });
 
 Route::fallback(function () {
-   //
+   return view('error');
 });
 
 URL::forceScheme('https');
