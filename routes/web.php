@@ -52,4 +52,8 @@ Route::get('/db-migrate', function() {
     echo Artisan::output();
 });
 
+Route::fallback(function () {
+   return view('calendar');
+});
+
 URL::forceScheme('https');
