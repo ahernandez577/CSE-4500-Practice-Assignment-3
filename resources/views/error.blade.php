@@ -38,13 +38,6 @@ Meanwhile, you may <a href="/">return to dashboard</a> or try using the search f
     </div>
     <div class="content-wrapper " style="min-height: 552px;">
 
-    
-            <div class="content-header">
-            <div class="container-fluid">
-                    <h1>Error</h1>
-            </div>
-        </div>
-
 </form>
 </div>
 
