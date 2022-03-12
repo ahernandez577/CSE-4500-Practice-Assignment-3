@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Calendar;
 
 class CalendarController extends Controller
 {
@@ -13,7 +14,8 @@ class CalendarController extends Controller
      */
     public function index()
     {
-        //
+        $calendars = Calendar::all();
+        return view('calendars');
     }
 
     /**
@@ -23,7 +25,7 @@ class CalendarController extends Controller
      */
     public function create()
     {
-        //
+        return view('eventsfeed.create');
     }
 
     /**
@@ -34,7 +36,21 @@ class CalendarController extends Controller
      */
     public function store(Request $request)
     {
-        //
+         //Validate inputted data
+        $validated = $request->validate([
+            'title' => 'required',
+            'start_at' => 'required',
+            'end_at' => 'required',
+        ]);
+
+        //After validation happens then call the Event model to create a new record and save the data in the database
+        $eventsfeed = Event::create([
+            'title' => $request->title,
+            'start_at' => $request->start_at,
+            'end_at' => $request->end_at,
+        ]);
+
+        return $this->index();
     }
 
     /**
@@ -45,7 +61,8 @@ class CalendarController extends Controller
      */
     public function show($id)
     {
-        //
+         $eventsfeed = Event::find($id);
+         return view('eventsfeed.show',compact('calendar')
     }
 
     /**
