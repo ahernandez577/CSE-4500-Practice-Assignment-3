@@ -14,8 +14,8 @@ class CalendarController extends Controller
      */
     public function index()
     {
-        $calendars = Calendar::all();
-        return view('calendars');
+        //$calendars = Calendar::all();
+        return view('calendar');
     }
 
     /**
@@ -43,7 +43,7 @@ class CalendarController extends Controller
             'end_at' => 'required',
         ]);
 
-        //After validation happens then call the Event model to create a new record and save the data in the database
+        //Call the Event model to create a new record and save the data into database
         $eventsfeed = Event::create([
             'title' => $request->title,
             'start_at' => $request->start_at,
