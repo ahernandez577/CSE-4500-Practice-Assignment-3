@@ -47,8 +47,8 @@ class CalendarController extends Controller
         //Call the Event model to create a new record and save the data into database
         $eventsfeed = Calendar::create([
             'title' => $request->title,
-            'start_at' => date($request->start_at),
-            'end_at' => date($request->end_at),
+            'startAt' => date($request->start_at),
+            'endAt' => date($request->end_at),
         ]);
 
         return redirect('/calendar');
