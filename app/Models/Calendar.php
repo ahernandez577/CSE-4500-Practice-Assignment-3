@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Calendar extends Model
 {
-    protected $fillable = ['title','events'];
+    protected $fillable = ['title','startTime', 'endTime'];
     use HasFactory;
 }
